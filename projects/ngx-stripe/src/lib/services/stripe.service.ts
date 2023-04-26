@@ -151,6 +151,7 @@ export class StripeService implements StripeServiceInterface {
 
   confirmPayment(options: {
     elements: StripeElements;
+    clientSecret: string;
     confirmParams?: Partial<ConfirmPaymentData>;
     redirect: 'if_required';
   }): Observable<{
